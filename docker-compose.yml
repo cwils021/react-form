@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  react-form:
+    build: .
+    image: "react-form"
+    stdin_open: true
+    ports:
+      - "${PORT}:3000"
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+        volume:
+          nocopy: true
+    environment:
+      PORT: ${PORT}
