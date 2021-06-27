@@ -1,11 +1,21 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Head from './components/Head'
+import FormContainer from './components/FormContainer/FormContainer';
+import './App.css'
+// todo import provider
+// todo import form container
+// todo import form
+// todo import modal
 
 
 function App() {
   return (
-    <h1>React Form with Hooks</h1>
+    <div className='react-form-app'>
+      <Head/>
+      <FormContainer/>
+    </div>
   );
 }
 

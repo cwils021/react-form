@@ -1,4 +1,18 @@
-const Schema = {
+/*********************************************************************************
+*                              Author: Chris Wilson                              *
+*                          Source Language: javascript                           *
+*                                                                                *
+*                            --- Code Description ---                            *
+*                            Constants for react-form                            *
+*********************************************************************************/
+
+export const roles = ["Select a Role","Customer Success", "Fullstack Engineer", "Product Manager"];
+
+export const industries = ["Select an Industry","Accounting", "Software development", "Landscaping"];
+
+export const selectionStrings = ['Select...', 'Yes', 'No'];
+
+export const  Schema = {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id" : "#/jobPost.Schema.json",
 	"title": "FormValidationSchema",
@@ -25,7 +39,7 @@ const Schema = {
 				"properties": {"role":{"const": "Fullstack Engineer"}}
 			},
 			"then": {
-				"properties": {"technical_requirement":{"enum": ["Yes", "No"],
+				"properties": {"technical_requirement":{"enum":['Yes','No'],
 												"title":"technical_requirement"}},
 				"required": ["technical_requirement"]
 			}
@@ -38,7 +52,7 @@ const Schema = {
 			}
 		},
 		"then":	{
-				"properties": {"technical_requirement":{"enum":["Yes", "No"],
+				"properties": {"technical_requirement":{"enum":['Yes','No'],
 												"title":"technical_requirement"}},
 				"required": ["technical_requirement"]
 		}
@@ -49,6 +63,4 @@ const Schema = {
 	  "role",
 	  "industry"
 	]
-};
-
-export default Schema;
+}
