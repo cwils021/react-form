@@ -5,12 +5,14 @@ import React from 'react'
 import InputGroup  from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import  BootForm   from 'react-bootstrap/Form';
-import { roles, industries, selectionStrings } from '../Consts';
+import { roles, industries, selectionStrings } from '../../Consts';
+
+import './Form.css';
 
 
 const Form = () => {
 	return (
-		<BootForm>
+		<BootForm className='form'>
 			<BootForm.Group controlId='Header'>
 				<BootForm.Control
 					size='lg'

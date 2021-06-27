@@ -1,0 +1,21 @@
+.form-container-flexbox {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+.form-container-flexbox>.image-box {
+	display: flex;
+	flex: 25%;
+	padding: 1em;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-container-flexbox>.form{
+	flex: 75%;
+	padding: 2em 10em;
+}
+
+h1, h4 {
+	text-align: center;
+}

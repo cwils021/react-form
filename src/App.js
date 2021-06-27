@@ -1,6 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from './components/Form'
+
+import Head from './components/Head'
+import FormContainer from './components/FormContainer/FormContainer';
+import './App.css'
 // todo import provider
 // todo import form container
 // todo import form
@@ -9,9 +12,9 @@ import Form from './components/Form'
 
 function App() {
   return (
-    <div>
-      <h1>React Form with Hooks</h1>
-      <Form/>
+    <div className='react-form-app'>
+      <Head/>
+      <FormContainer/>
     </div>
   );
 }
