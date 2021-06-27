@@ -26,7 +26,8 @@ const Form = () => {
 					</BootForm.Label>
 					<BootForm.Control
 						name='company_name'
-						type='input'
+						as='input'
+						type='string'
 						placeholder='ABC Company'
 					/>
 				</BootForm.Group>
@@ -40,7 +41,9 @@ const Form = () => {
 						name='role'
 						as='select'
 					>
-
+						{roles.map((role) => (
+							<option id={roles.indexOf(role)}>{role}</option>
+						))}
 					</BootForm.Control>
 				</BootForm.Group>
 			</InputGroup>
@@ -53,7 +56,9 @@ const Form = () => {
 						name='industry'
 						as='select'
 					>
-
+						{industries.map((industry) => (
+							<option id={industries.indexOf(industry)}>{industry}</option>
+						))}
 					</BootForm.Control>
 				</BootForm.Group>
 			</InputGroup>
@@ -65,7 +70,11 @@ const Form = () => {
 					<BootForm.Control
 						name='technical_requirement'
 						as='select'
-					/>
+					>
+						{selectionStrings.map((string) => (
+							<option id={selectionStrings.indexOf(string)}>{string}</option>
+						))}
+					</BootForm.Control>
 				</BootForm.Group>
 			</InputGroup>
 			<Button
