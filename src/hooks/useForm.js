@@ -1,7 +1,8 @@
 import { useContext, useEffect, useCallback, useRef } from 'react';
 import { FormContext } from '../providers/FormContextProvider';
 import Ajv from 'ajv';
-import { Schema,  validErrors } from '../Consts'
+import { Schema, validErrors } from '../Consts'
+
 
 const useForm = () => {
 
@@ -28,6 +29,10 @@ const useForm = () => {
 		valid.current = (validate());
 	}
 
+	function handleClose() {
+
+		window.location.reload();
+	}
 
 
 // <---------------- View Logic ---------------------------->
@@ -136,7 +141,9 @@ const useForm = () => {
 		handleSubmit,
 		isSubmitting,
 		show : state.show,
-		validated : state.validated
+		validated : state.validated,
+		errors: state.errors,
+		handleClose,
 	}
 
 
