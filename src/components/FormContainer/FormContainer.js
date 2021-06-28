@@ -7,7 +7,7 @@ import './FormContainer.css'
 
 
 const FormContainer = () => {
-	const [state, setState] = useContext(FormContext);
+	const [state] = useContext(FormContext);
 	const { show, validated } = state;
 	return (
 		<div className='form-container'>

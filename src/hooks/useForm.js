@@ -1,12 +1,12 @@
 import { useContext, useEffect, useCallback, useRef } from 'react';
 import { FormContext } from '../providers/FormContextProvider';
 import Ajv from 'ajv';
-import { Schema, validTestPost, validErrors } from '../Consts'
+import { Schema,  validErrors } from '../Consts'
 
 const useForm = () => {
 
 	const [state, setState] = useContext(FormContext);
-	const { values, showTech, errors, show, isSubmitting, validated } = state;
+	const { values, showTech,  isSubmitting, validated } = state;
 	const valid = useRef(false);
 	//<---------------- Event Handlers ---------------------->
 
