@@ -15,26 +15,6 @@ const SuccessfulPost = (props) => {
 		technical_requirement: "Technical Skills Required: "
 	};
 
-	function readyForPrint() {
-
-		let printObj = {};
-		Object.entries(values).map(([key, val]) => (
-			printObj = {
-				...printObj,
-				[dict[key]]:val
-			}
-		))
-		const objectArray = Object.entries(printObj);
-		return (
-			<ul>
-				{objectArray.forEach(([key,val]) => (
-					<li>{ `${key}: ${val}` }</li>
-				))}
-				</ul>
-			);
-
-	}
-
 	return (
 		<Modal
 			{...props}
