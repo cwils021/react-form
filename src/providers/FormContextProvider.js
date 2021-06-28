@@ -13,6 +13,8 @@ const FormContextProvider = (props) => {
 		isSubmitting: false,
 		values: {},
 		errors: {},
+		showTech: false,
+		validated: false
 	});
 
 	return (
