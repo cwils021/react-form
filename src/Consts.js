@@ -12,6 +12,8 @@ export const industries = ["Select an Industry","Accounting", "Software developm
 
 export const selectionStrings = ['Select...', 'Yes', 'No'];
 
+export const validErrors = ['enum', 'minLength', 'maxLength', 'required'];
+
 export const Schema = {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "#/jobPost.Schema.json",
