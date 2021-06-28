@@ -1,18 +1,19 @@
-import React, { useContext } from 'react'
-import { FormContext } from '../../providers/FormContextProvider';
+import React from 'react'
+// import { FormContext } from '../../providers/FormContextProvider';
 
 import Form from '../Form/Form';
+import SuccessfulPost from '../SuccessfulPost';
+import useForm from '../../hooks/useForm';
 import './FormContainer.css'
 
 
 
 const FormContainer = () => {
-	const [state] = useContext(FormContext);
-	const { show, validated } = state;
+	const { show, validated } = useForm();
 	return (
 		<div className='form-container'>
 			{(show && validated) ?
-				<h1>Posted</h1> :
+				<SuccessfulPost  /> :
 				<>
 					<h1>QuikPost</h1>
 					<h4>Quickly and Easily Post a Job to QuikPost</h4>

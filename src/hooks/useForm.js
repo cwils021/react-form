@@ -136,7 +136,7 @@ const useForm = () => {
 
 	return {
 		handleChange,
-		values,
+		[values]: state,values,
 		showTech,
 		handleSubmit,
 		isSubmitting,
