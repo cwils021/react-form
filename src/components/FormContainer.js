@@ -37,7 +37,7 @@ const FormContainer = () => {
   return (
     <div className="d-flex flex-column">
       <TitleBar values={[title, subtitle]} />
-      <div className="jumbotron jumbotron-fluid d-flex flex-row flex-fill justify-content-around align-items-center m-5 ">
+      <div className="jumbotron jumbotron-fluid d-md-flex flex-row flex-fill justify-content-around align-items-center m-5 ">
         <Card className="m-4">
           <Card.Img
             as={Image}
@@ -46,17 +46,15 @@ const FormContainer = () => {
             alt="Fake Logo"
             custom
           />
-          <Card.ImgOverlay className="d-flex flex-column justify-content-between">
-            <Card.Text className="d-flex flex-column-reverse justify-content-between flex-fill display-4 font-weight-bold text-dark">
+          <Card.ImgOverlay className="d-none d-md-flex flex-column justify-content-between">
+            <Card.Text className="d-none d-md-flex flex-md-column-reverse justify-content-between flex-fill font-weight-bold text-dark display-4">
               <p>Intuitive.</p>
               <p>Simple.</p>
               <p>Fast.</p>
             </Card.Text>
-            <Card.Text className="d-flex flex-column justify-content-center align-items-center font-weight-bold">
-              <p className="text-decoration-none">
-                Quickly Post Open Postions From Anywhere
-              </p>
-              <Button className="w-50" variant="outline-primary">
+            <Card.Text className="d-md-flex flex-column justify-content-center align-items-center font-weight-bold">
+              <p>Quickly Post Open Postions From Anywhere</p>
+              <Button className="w-50 mt-4" variant="outline-primary">
                 Learn More
               </Button>
             </Card.Text>
