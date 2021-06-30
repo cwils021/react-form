@@ -1,3 +1,11 @@
+/*********************************************************************************
+ *                              Author: Chris Wilson                              *
+ *             Repository: https://github.com/cwils021/react-form.git             *
+ *                                                                                *
+ *                            --- Code Description ---                            *
+ *                          Test file for App component                           *
+ *********************************************************************************/
+
 import { shallow } from "enzyme";
 import App from "../App";
 

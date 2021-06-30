@@ -1,27 +1,30 @@
-// todo set state
-// todo create provider
-import React, { useState } from 'react';
+/*********************************************************************************
+ *                              Author: Chris Wilson                              *
+ *             Repository: https://github.com/cwils021/react-form.git             *
+ *                                                                                *
+ *                            --- Code Description ---                            *
+ *               Form Context Provider, holds state for entire app                *
+ *********************************************************************************/
 
-const FormContext = React.createContext([
-	{},
-	() => { }
-]);
+import React, { useState } from "react";
+
+const FormContext = React.createContext([{}, () => {}]);
 
 const FormContextProvider = (props) => {
-	const [state, setState] = useState({
-		show: false,
-		isSubmitting: false,
-		values: {},
-		errors: {},
-		showTech: false,
-		validated: false
-	});
+  const [state, setState] = useState({
+    show: false,
+    isSubmitting: false,
+    values: {},
+    errors: {},
+    showTech: false,
+    validated: false,
+  });
 
-	return (
-		<FormContext.Provider value={[state, setState]}>
-			{props.children}
-		</FormContext.Provider>
-	);
-}
+  return (
+    <FormContext.Provider value={[state, setState]}>
+      {props.children}
+    </FormContext.Provider>
+  );
+};
 
-export { FormContext, FormContextProvider }
+export { FormContext, FormContextProvider };

@@ -1,12 +1,20 @@
-//  todo add validation
+/*********************************************************************************
+ *                              Author: Chris Wilson                              *
+ *             Repository: https://github.com/cwils021/react-form.git             *
+ *                                                                                *
+ *                            --- Code Description ---                            *
+ * Required Form, only renders technical requirement question (#4) if required,   *
+ *  once submit button is pressed it will re-run validation after every change,   *
+ *           and render the SuccessfulPost Modal Component when valid             *
+ *********************************************************************************/
+
 import React from "react";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import BootForm from "react-bootstrap/Form";
 
-import { roles, industries, selectionStrings } from "../../Consts";
-import useForm from "../../hooks/useForm";
-// import './Form.css';
+import { roles, industries, selectionStrings } from "../Consts";
+import useForm from "../hooks/useForm";
 import Alert from "react-bootstrap/Alert";
 
 const Form = () => {
@@ -18,6 +26,9 @@ const Form = () => {
     errors,
     handleClose,
   } = useForm();
+
+  // !todo Extract Form control groups into own components
+  // const Question = (labelText, handleChange, as, selectionOptionText?) => {...}
   return (
     <BootForm className="w-100 p-4" onSubmit={handleSubmit}>
       <BootForm.Group controlId="Header">

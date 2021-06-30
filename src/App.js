@@ -1,3 +1,12 @@
+/*********************************************************************************
+ *                              Author: Chris Wilson                              *
+ *                          Source Language: javascript                           *
+ *             Repository: https://github.com/cwils021/react-form.git             *
+ *                                                                                *
+ *                            --- Code Description ---                            *
+ *           Main App, Calls FormContainer Wrapped in a Context Provider          *
+ *********************************************************************************/
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 

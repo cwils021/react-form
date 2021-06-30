@@ -1,3 +1,12 @@
+/*********************************************************************************
+ *                              Author: Chris Wilson                              *
+ *             Repository: https://github.com/cwils021/react-form.git             *
+ *                                                                                *
+ *                            --- Code Description ---                            *
+ *    Custom hook to handle events, set views of form component, and validate     *
+ *                                  submissions                                   *
+ *********************************************************************************/
+
 import { useContext, useEffect, useCallback, useRef } from "react";
 import { FormContext } from "../providers/FormContextProvider";
 import Ajv from "ajv";
@@ -6,7 +15,8 @@ import { Schema, validErrors } from "../Consts";
 const useForm = () => {
   const [state, setState] = useContext(FormContext);
   const { values, showTech, isSubmitting, validated } = state;
-  const valid = useRef(false);
+  const valid = useRef(false); // reference to form submission being valid on last change after submission
+
   //<---------------- Event Handlers ---------------------->
 
   function handleChange(e) {
@@ -70,6 +80,7 @@ const useForm = () => {
 
   // <------------------ Form Validation --------------------->
 
+  // !todo move validation to own file
   const validate = useCallback(() => {
     const ajv = new Ajv({ allErrors: true, verbose: true });
     const validate = ajv.compile(Schema);
@@ -138,11 +149,5 @@ const useForm = () => {
     handleClose,
   };
 };
-
-// ! Functions to Create
-// ! ==================
-// todo submitValidForm
-// todo validateSubmission
-// todo handleClose
 
 export default useForm;

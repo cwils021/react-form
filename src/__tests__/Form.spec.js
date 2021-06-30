@@ -1,5 +1,13 @@
+/*********************************************************************************
+ *                              Author: Chris Wilson                              *
+ *             Repository: https://github.com/cwils021/react-form.git             *
+ *                                                                                *
+ *                            --- Code Description ---                            *
+ *                    Example tests written for Form Component                    *
+ *********************************************************************************/
+
 import { mount, shallow } from "enzyme";
-import Form from "../components/Form/Form";
+import Form from "../components/Form";
 import useForm from "../hooks/useForm";
 
 describe("Test Form Component", () => {
