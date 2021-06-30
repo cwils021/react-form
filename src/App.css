@@ -3,3 +3,6 @@ html {
   height: auto;
   width: auto;
 }
+#root {
+  background: #2865f394;
+}
