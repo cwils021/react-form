@@ -5,8 +5,6 @@ import FormContainer from "./components/FormContainer";
 import { FormContextProvider } from "./providers/FormContextProvider";
 import "./App.css";
 
-// todo import modal
-
 function App() {
   return (
     <FormContextProvider>
