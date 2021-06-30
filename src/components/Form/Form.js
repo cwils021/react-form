@@ -43,7 +43,9 @@ const Form = () => {
             isInvalid={isSubmitting && errors.company_name}
           />
           <BootForm.Control.Feedback type="invalid">
-            {errors.company_name && <span>{errors.company_name}</span>}
+            {isSubmitting && errors.company_name && (
+              <span>{errors.company_name}</span>
+            )}
           </BootForm.Control.Feedback>
         </BootForm.Group>
       </InputGroup>
@@ -63,7 +65,7 @@ const Form = () => {
             ))}
           </BootForm.Control>
           <BootForm.Control.Feedback type="invalid">
-            {errors.role && <span>{errors.role}</span>}
+            {isSubmitting && errors.role && <span>{errors.role}</span>}
           </BootForm.Control.Feedback>
         </BootForm.Group>
       </InputGroup>
@@ -83,7 +85,7 @@ const Form = () => {
             ))}
           </BootForm.Control>
           <BootForm.Control.Feedback type="invalid">
-            {errors.industry && <span>{errors.industry}</span>}
+            {isSubmitting && errors.industry && <span>{errors.industry}</span>}
           </BootForm.Control.Feedback>
         </BootForm.Group>
       </InputGroup>
@@ -105,7 +107,7 @@ const Form = () => {
               ))}
             </BootForm.Control>
             <BootForm.Control.Feedback type="invalid">
-              {errors.technical_requirement && (
+              {isSubmitting && errors.technical_requirement && (
                 <span>{errors.technical_requirement}</span>
               )}
             </BootForm.Control.Feedback>
