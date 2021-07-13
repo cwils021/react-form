@@ -132,7 +132,7 @@ const Form = () => {
         <InputGroup>
           <Alert className="mt-5 p-2" variant="danger">
             <Alert.Heading>Uh oh! Errors Found!</Alert.Heading>
-            <p> Please ammend the above errors and we can take it from there</p>
+            <p> Please amend the above errors and we can take it from there</p>
             <hr />
             <div className="d-flex justify-content-between">
               <b>Want to just start over?</b>
